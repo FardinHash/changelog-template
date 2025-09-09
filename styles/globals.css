@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-950 text-white antialiased;
+  }
+
+  * {
+    @apply border-white/10;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/20 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-white/30;
+  }
+
+  /* Prose customizations for minimalistic dark theme */
+  .prose-invert {
+    @apply text-gray-300 max-w-none;
+  }
+
+  .prose-invert h1 {
+    @apply text-white text-2xl sm:text-3xl font-bold mb-6 mt-8 leading-tight;
+  }
+
+  .prose-invert h2 {
+    @apply text-white text-xl sm:text-2xl font-semibold mb-4 mt-8 leading-tight;
+  }
+
+  .prose-invert h3 {
+    @apply text-gray-200 text-lg sm:text-xl font-medium mb-3 mt-6 leading-tight;
+  }
+
+  .prose-invert h4 {
+    @apply text-gray-200 text-base sm:text-lg font-medium mb-2 mt-4;
+  }
+
+  .prose-invert p {
+    @apply text-gray-300 leading-relaxed mb-4;
+  }
+
+  .prose-invert ul,
+  .prose-invert ol {
+    @apply space-y-2 my-4 pl-4;
+  }
+
+  .prose-invert li {
+    @apply text-gray-300 leading-relaxed;
+  }
+
+  .prose-invert li::marker {
+    @apply text-gray-500;
+  }
+
+  .prose-invert code {
+    @apply bg-white/10 text-gray-200 px-2 py-1 rounded text-sm font-mono border border-white/20;
+  }
+
+  .prose-invert pre {
+    @apply bg-white/5 border border-white/10 rounded-xl p-4 overflow-x-auto my-4;
+  }
+
+  .prose-invert pre code {
+    @apply bg-transparent border-none p-0 text-gray-300 text-sm;
+  }
+
+  .prose-invert strong {
+    @apply font-semibold text-white;
+  }
+
+  .prose-invert blockquote {
+    @apply border-l-4 border-white/20 pl-4 italic text-gray-400 bg-white/5 py-3 rounded-r-xl my-4;
+  }
+
+  .prose-invert hr {
+    @apply border-white/10 my-8;
+  }
+
+  .prose-invert a {
+    @apply text-gray-300 hover:text-white transition-colors underline underline-offset-4 decoration-white/30 hover:decoration-white/60;
+  }
+
+  .prose-invert table {
+    @apply w-full border-collapse border border-white/10 rounded-xl overflow-hidden my-4;
+  }
+
+  .prose-invert th {
+    @apply bg-white/5 text-white font-medium px-4 py-3 text-left border-b border-white/10;
+  }
+
+  .prose-invert td {
+    @apply text-gray-300 px-4 py-3 border-b border-white/5;
+  }
+
+  .prose-invert tr:last-child td {
+    @apply border-b-0;
+  }
+}
